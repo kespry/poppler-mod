@@ -7,6 +7,5 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ -n "$BUILD_DIR" ]; then
   echo "Heroku detected; using pre-built poppler"
   echo "Build dir is $BUILD_DIR"
-  echo `env`
-  tar -zf poppler-heroku.tar.xz -C $BUILD_DIR
+  tar -xvzf poppler-heroku.tar.gz -C $BUILD_DIR/poppler
 fi
