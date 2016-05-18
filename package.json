@@ -1,0 +1,10 @@
+{
+  "name": "poppler-mod",
+  "version": "1.0.0",
+  "description": "Poppler with pdftocairo modified so it doesn't crop",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./install.sh"
+  },
+  "license": "ISC"
+}
