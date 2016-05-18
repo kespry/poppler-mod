@@ -1,0 +1,15 @@
+diff --git a/utils/pdftocairo.cc b/utils/pdftocairo.cc
+index 71c60ef..776e218 100644
+--- a/utils/pdftocairo.cc
++++ b/utils/pdftocairo.cc
+@@ -437,8 +437,8 @@ static void getCropSize(double page_w, double page_h, double *width, double *hei
+   if (h == 0)
+     h = (int)ceil(page_h);
+
+-  *width =  (crop_x + w > page_w ? (int)ceil(page_w - crop_x) : w);
+-  *height = (crop_y + h > page_h ? (int)ceil(page_h - crop_y) : h);
++  *width = double(w);
++  *height = double(h);
+ }
+
+ static void getOutputSize(double page_w, double page_h, double *width, double *height)
